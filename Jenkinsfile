@@ -3,6 +3,7 @@ pipeline {
     environment {
         DOCKER_IMAGE_NAME = "pratapkc/train-schedule"
     }
+    stages{
         stage('DeployToProduction') {
             when {
                 branch 'master'
@@ -16,3 +17,4 @@ pipeline {
             }
         }
     }
+}
